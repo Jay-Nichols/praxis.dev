@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms Redux</title>
+</head>
+<body>
+	<div>
+		<form method="POST" action="http://requestb.in/11wdb9z1">
+			<p>
+				<label for="username">Username</label>
+				<input id="username" name="username" type="text">
+			</p>
+			<p>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password">
+			</p>
+			<p>
+				<button type="submit">Submit</button>
+			</p>
+		</form>
+	</div>
+	<div>
+		<form method="POST" action="http://requestb.in/11wdb9z1">
+			<label for="writeSomething">Write Something</label>
+			<textarea id="writeSomething" name="writeSomething" rows="10" cols="50"></textarea>
+			<button type="submit">Send</button>
+		</form>
+	</div>
+	<div>
+		<form method="POST" action="http://requestb.in/11wdb9z1">
+			<p>Who's going to win the presidential election in November?</p>
+			<label><input type="radio" name="q1" value="hillaryClinton">Hillary Clinton</label>
+			<label><input type="radio" name="q1" value="donaldTrump">Donald Trump</label>
+			<label><input type="radio" name="q1" value="garyJohnson">Gary Johnson</label>
+			<label><input type="radio" name="q1" value="jillStein">Jill Stein</label>
+			<label><input type="radio" name="q1" value="whoCares" checked>Who cares? It doesn't matter.</label>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+	<div>
+		<form method="POST" action="http://requestb.in/11wdb9z1">
+			<p>How do you handle Mexican food regret?</p>
+				<label><input type="checkbox" id="regret1" name="regret[]" value="pepto">Pepto Bismol</label>
+				<label><input type="checkbox" id="regret2" name="regret[]" value="immodium">Immodium</label>
+				<label><input type="checkbox" id="regret3" name="regret[]" value="prayer">Prayer</label>
+				<label><input type="checkbox" id="regret4" name="regret[]" value="appeasement">Promising God, or any deity that will listen, that you'll be a better person if He/She/It will make the pain go away right this instant.</label>
+			<button type="submit">Send</button>
+		</form>
+	</div>
+</body>
+</html>
