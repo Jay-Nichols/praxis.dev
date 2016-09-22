@@ -18,13 +18,13 @@ for (var k = 100; k > 0; k = k - 5) {
 
 //Selecting even numbers using modulus
 
-// for (var l = 0; l < 20; l++) {
-// 	if (l % 2 = 0) {
-// 		console.log(l + " is an even number");
-// 	} else {
-// 		console.log(l + " is an odd number");
-// 	}
-// }
+for (var l = 0; l < 20; l++) {
+	if (l % 2 == 0) {
+		console.log(l + " is an even number");
+	} else {
+		console.log(l + " is an odd number");
+	}
+}
 
 var random = Math.ceil(Math.random()*10);
 var solution;
