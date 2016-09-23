@@ -47,3 +47,50 @@ things.forEach(function (element, index, array) {
 stuff.forEach(function (name, indexNumber, fullArray) {
 	console.log(name + " has an index value of " + indexNumber + " in the stuff array. All of the array items are: " + fullArray);
 });
+
+
+//manipulating arrays
+console.log(oldSchoolEmptyArray);
+oldSchoolEmptyArray.push('handlebar moustaches', 'banana seat bikes');
+console.log(oldSchoolEmptyArray);
+oldSchoolEmptyArray.unshift('acid rock');
+console.log(oldSchoolEmptyArray);
+var removedLastItem = oldSchoolEmptyArray.pop();
+console.log(removedLastItem);
+console.log(oldSchoolEmptyArray);
+oldSchoolEmptyArray.push('banana seat bikes');
+console.log(oldSchoolEmptyArray);
+var removedFirstItem = oldSchoolEmptyArray.shift();
+console.log(removedFirstItem);
+console.log(oldSchoolEmptyArray);
+oldSchoolEmptyArray.unshift('acid rock');
+console.log(oldSchoolEmptyArray);
+var index = oldSchoolEmptyArray.indexOf('acid rock');
+console.log(index);
+index = oldSchoolEmptyArray.indexOf('banana seat bikes');
+console.log(index);
+console.log(stuff);
+var removed = stuff.splice(1, 2);
+console.log(removed);
+console.log(stuff);
+stuff.splice(1, 0, 'hydrogen', 'cactus');
+console.log(stuff);
+stuff.splice(stuff.indexOf('hydrogen'), 2, 'pick', 'caterpillar', 'tank');
+console.log(stuff);
+stuff.reverse();
+console.log(stuff);
+stuff.sort();
+
+//split/join
+var nouns = "shirt, telegraph pole, detritus";
+console.log(nouns);
+var nounArray = nouns.split(", ");
+console.log(nounArray);
+
+var nounString = nounArray.join(", ");
+console.log(nounString);
+
+
+
+
+
