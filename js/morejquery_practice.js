@@ -20,3 +20,24 @@ $(document).ready(function() {
 		}
 	});
 });
+
+//show and highlightedtext / fading / fade toggle
+
+$(document).ready(function() {
+	$('#ozzySongs').click(function() {
+		$('#ozzy').fadeToggle();
+	});
+	$('#gnrSongs').click(function() {
+		$('#gnr').fadeToggle();
+	});
+});
+
+//sliding 
+$(document).ready(function() {
+	$('#rhcpSongs').click(function() {
+		$('#rhcp').slideToggle();
+	});
+})
+
+
+
