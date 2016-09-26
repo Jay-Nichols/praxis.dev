@@ -6,6 +6,9 @@
 		.centerText {
 			text-align: center;
 		}
+		.highlighted {
+			background-color: #FF0;
+		}
 	</style>
 </head>
 <body>
@@ -17,12 +20,13 @@
 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p class="modified">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		<p class="modified"><span id="highlightedId">Lorem ipsum dolor</span> sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<a id="clickToHighlight" href="#">Click to Highlight</a>
 		<a id="anchor" href="http://www.google.com" class="modified">Dare you to click here</a>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="../js/jquery_practice.js"></script>

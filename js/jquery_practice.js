@@ -73,3 +73,11 @@ $(document).ready(function() {
 		alert("Using on method with keyup event");
 	});
 });
+
+//essential methods / attributes and css
+$(document).ready(function() {
+	$('#clickToHighlight').click(function(event) {
+		event.preventDefault();
+		$('#highlightedId').addClass('.highlighted');
+	});
+});
