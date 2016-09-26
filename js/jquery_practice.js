@@ -30,3 +30,46 @@ $(document).ready(function() {
 	$('*').css('font-family', 'helvetica');
 	$('.centerText, a').css('border', '1px solid black');
 });
+
+
+// mouse events
+
+//click
+$(document).ready(function() {
+	$('#hello').click(function() {
+		alert("You just clicked on " + $('#hello').html());
+	});
+});
+
+$(document).ready(function() {
+	$('p').dblclick(function() {
+		alert("You just double clicked on a paragraph.");
+	});
+});
+
+//hover
+$(document).ready(function() {
+	$('.modified').hover(
+		function() {
+			$(this).css('background-color', '#FF0');
+		},
+		function() {
+			$(this).css('background-color', '#FFF')
+		}
+	);
+});
+
+//keyboard events
+$(document).ready(function() {
+	$('#textfield').keydown(function() {
+		alert("You triggered the keydown event");
+	});
+});
+
+//using on method to trigger events
+
+$(document).ready(function() {
+	$('#textfield').on('keyup', function() {
+		alert("Using on method with keyup event");
+	});
+});
