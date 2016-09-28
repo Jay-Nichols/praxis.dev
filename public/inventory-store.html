@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+</head>
+<body>
+<div class="container-fluid">
+    <h1>My Tool Store</h1>
+
+    <table class="table table-striped" id="products">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Categories</th>
+            </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+    </table>
+
+    <button id="refreshButton" class="btn btn-default" type="button">refresh</button>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+(function() {
+    "use strict";
+    function ajaxStore() {
+        $.ajax(
+            {
+                url: "/data/inventory.json",
+                type: "GET"
+            }
+        ).done(function(data){
+            $('#insertProducts').html("");
+            data.forEach(function(tool){
+            var categories = tool.categories.join(' ');
+                var row = "<tr>";
+                    row += "<td>" + tool.title + "</td>";
+                    row += "<td>" + tool.quantity + "</td>";
+                    row += "<td>" + tool.price + "</td>";
+                    row += "<td>" + categories + "</td>";
+                    row += "</tr>";
+                $('#insertProducts').append(row);
+            })
+        }).fail(function(){
+                alert("The request didn't go through");
+        });
+
+    ajaxStore();
+    $('refreshButton').on('click', ajaxStore);
+    };
+    
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+})();
+</script>
+
+</body>
+</html>
