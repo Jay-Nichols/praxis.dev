@@ -55,10 +55,10 @@
         }).fail(function(){
                 alert("The request didn't go through");
         });
-
-    ajaxStore();
-    $('refreshButton').on('click', ajaxStore);
     };
+    $('refreshButton').on('click', ajaxStore);
+    ajaxStore();
+    
     
     // TODO: Create an ajax GET request for /data/inventory.json
 
