@@ -30,3 +30,21 @@ var sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
 	}
 sout = sout + "</table>";
 document.write(sout);
+
+
+
+//playing around with loops
+
+var arrays = [
+	[1, 'aegean', true],
+	[false, 7.44, 'dorian'],
+	['ponce de leon', 908, 88]
+];
+
+for (var i = 0; i < arrays.length; i++) {
+	var array = arrays[i];
+	for (var j = 0; j < array.length; j++) {
+		console.log(array[j]);
+	}
+
+};
