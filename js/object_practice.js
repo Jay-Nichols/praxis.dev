@@ -38,3 +38,27 @@ someObject.usingThis = function() {
 } 
 
 someObject.usingThis();
+
+
+
+//object with constructor//
+function Person(first, last, age) {
+	this.first = first;
+	this.last = last;
+	this.age = age;
+	var bankBalance = 7500;
+
+	this.askTeller = function(pass) {
+		if (pass == 1234) return bankBalance;
+		else return "Wrong Password";
+	};
+
+}
+
+
+var john = new Person("John", "Smith", 30);
+var myBalance = john.askTeller(1234);
+console.log(myBalance);
+
+
+
