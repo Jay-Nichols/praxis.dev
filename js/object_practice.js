@@ -49,8 +49,11 @@ function Person(first, last, age) {
 	var bankBalance = 7500;
 
 	this.askTeller = function(pass) {
-		if (pass == 1234) return bankBalance;
-		else return "Wrong Password";
+		if (pass == 1234) {
+			return bankBalance;
+		} else {
+			return "Wrong Password";
+		}
 	};
 
 }
