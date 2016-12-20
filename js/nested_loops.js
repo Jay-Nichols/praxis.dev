@@ -7,6 +7,8 @@ for (var i = 0; i <= 10; i++) {
 	}
 }
 
+console.log("---------------");
+
 for (var i = 1; i <= 10; i++) {
 	var log = '';
 	for (var j = 1; j <= i; j++) {
@@ -18,6 +20,8 @@ for (var i = 1; i <= 10; i++) {
 	}
 	console.log(log);
 }
+
+console.log("---------------");
 
 var sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
 	for (i = 1; i <= 10; i++) {
@@ -46,5 +50,20 @@ for (var i = 0; i < arrays.length; i++) {
 	for (var j = 0; j < array.length; j++) {
 		console.log(array[j]);
 	}
-
 };
+
+console.log("---------------");	
+
+//loop within a loop within a loop
+
+for (var i = 0; i <= 3; i++) {
+	console.log("Outer loop count: " + i);
+	for (var j = 0; j <= 3; j++) {
+		console.log("Inner loop count: " + j)
+		for (var k = 0; k <= 3; k++) {
+			console.log("Innermost loop count: " + k);
+		}
+	}		
+}
+
+	
