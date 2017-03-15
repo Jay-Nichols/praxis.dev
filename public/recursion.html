@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recursive Function</title>
+</head>
+<body>
+	<script type="text/javascript">
+	"use strict";
+
+	//print out "hello" ten times
+	function hello10Times(str, n){
+		if (n > 0) {
+			console.log(str);
+			hello10Times(str, n - 1);
+		}
+	}
+
+	hello10Times("Hello", 10);
+
+	console.log("------------");
+
+	//find sum of even numbers that make up n
+
+	function sumOfEven(n) {
+		if (n % 2 == 0) {
+			if (n > 0) {
+				return (n - 2) + sumOfEven(n - 2);
+			} else {
+				return 0;
+			}
+		} else {
+			return (sumOfEven(n + 1));
+		}
+				
+	}
+
+	console.log(sumOfEven(3));
+	console.log(sumOfEven(5));
+	console.log(sumOfEven(6));
+	console.log(sumOfEven(7));
+	console.log(sumOfEven(8));
+
+	</script>
+</body>
+</html>
