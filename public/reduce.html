@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reduce Function Practice</title>
+</head>
+<body>
+	<script type="text/javascript">
+	"use strict";
+
+	
+
+	var orders = [
+		{amount: 250},
+		{amount: 400},
+		{amount: 100},
+		{amount: 325}
+	]
+
+	var totalAmount = 0;
+	for (var i = 0; i < orders.length; i++) {
+		totalAmount += orders[i].amount;
+	}
+
+	console.log(totalAmount);
+
+	//now with reduce method
+
+	var newTotalAmount = orders.reduce(function(sum, order) {
+		console.log(sum, order);
+		return sum + order.amount
+	}, 0)
+
+	console.log(newTotalAmount);
+
+	console.log("-------------");
+
+	var array = [1, 2, 3, 4, 5, 6, 7];
+	var addThemUp = array.reduce(function(a, b) {
+		return a + b;
+	});
+	var multiplyThem = array.reduce(function(a, b) {
+		return a * b;
+	})
+	console.log(addThemUp);
+	console.log(multiplyThem);
+
+	console.log("-------------");
+
+
+
+	</script>
+</body>
+</html>
