@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closures</title>
+</head>
+<body>
+	<script>
+	function generateNumber() {
+		//var num available to use in checkNumber function
+		var num = 1;
+		function checkNumber() {
+			console.log(num);
+		}
+		num++;
+		return checkNumber;
+	}
+
+	var number = generateNumber();
+	number();
+	// will print 2 because num is available to checkNumber, then is incremneted and stored as 2, then when checkNumber is returned, 2 is console.logged
+
+
+	function sayHello() {
+		var say = function() {
+			console.log(hello);
+		}
+		var hello = "Hello, Jay";
+		return say;
+	}
+
+	var sayHelloClosure = sayHello();
+	sayHelloClosure();
+
+	//since hello and the say function is in the scope of sayHello function , I can use hello in the say function. When sayHello is called, hello gets pushed into the say function and "hello jay" is printed to the console.
+		
+
+	</script>
+
+</body>
+</html>
