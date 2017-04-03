@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Practice</title>
+</head>
+<body>
+	<h1 id="main-heading">Hello World!</h1>
+	<div id="main-section">
+		<p>Ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+
+	<a href="https://www.google.com" id="search-link" target="_blank">Google</a>
+
+	<form name="login">
+		<div>
+			<label for="username">Username</label>
+			<input id="username" name="username" type="text">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password">
+		</div>
+		<div>
+			<input type="submit">
+		</div>
+	</form>	
+
+	<h1>List One</h1>
+	<ul>
+	    <li data-item="first_item" class="odd list-one-item">List 1, Item 1</li>
+	    <li data-item="second_item" class="even list-one-item">List 1, Item 2</li>
+	</ul>
+	<h1>List Two</h1>
+	<ul>
+	    <li data-item="third_item" class="odd list-two-item">List 2, Item 1</li>
+	    <li data-item="fourth_item" class="even list-two-item">List 2, Item 2</li>
+	</ul>
+
+	<button id="btnToClick">Click Me</button>
+
+	<script type="text/javascript">
+	"use strict";
+	(function() {
+		var btnToClick = document.getElementById('btnToClick');
+
+		var evenElements = document.getElementsByClassName("even");
+		var oddElements = document.getElementsByClassName("odd");
+
+		console.log(evenElements);
+		console.log(oddElements);
+
+		//Printing first index on evenElements:
+		console.log(evenElements[0]);
+
+		//Printing second index on evenElements:
+		console.log(evenElements[1]);
+
+		//Grouping by tag name:
+
+		var listItems = document.getElementsByTagName('li');
+
+		console.log(listItems);
+
+		for (var i = 0; i < listItems.length; i++) {
+			console.log(listItems[i]);
+		}
+
+		for (var i = 0; i < listItems.length; i++) {
+			var data = listItems[i].getAttribute('data-item');
+			console.log(data)
+		}
+
+		var usernameInput = document.forms.login.username;
+
+		console.log(usernameInput.value);
+
+		console.log(btnToClick);
+
+		var mainHeading = document.getElementById("main-heading");
+		console.log(mainHeading.innerHTML);
+		mainHeading.innerHTML = "Hello Jay!";
+		console.log(mainHeading.innerHTML);
+
+		var mainSection = document.getElementById('main-section');
+		console.log(mainSection.innerHTML);
+		mainSection.innerHTML = "Something";
+		console.log(mainSection.innerHTML);
+
+		var searchLink = document.getElementById('search-link');
+
+		console.log(searchLink.hasAttribute('href')); //prints true
+		console.log(searchLink.hasAttribute('src')); //prints false
+
+		console.log(searchLink.getAttribute('href')); //prints https://www.google.com
+		
+		//add attribute (class="button-default")
+		searchLink.setAttribute("class", "button-default");
+
+		//change href (href="https://www.yahoo.com")
+		searchLink.setAttribute("href", "https://www.yahoo.com");
+
+		//remove attribe (target)
+		searchLink.removeAttribute("target");
+
+		//since document.getElement pushes into an array, we have to choose an index
+		var bodyElement = document.getElementsByTagName("body")[0];
+
+		//change font color to gray
+		bodyElement.style.color = '#444';
+
+		//change background color. since background-color has a dash, have to use brackets and quotes
+		bodyElement.style['background-color'] = '#EEE';
+
+		//change font 
+		bodyElement.style.fontFamily = "Helvetica, Verdana, Sans-Serif";
+	})();
+	</script>
+
+</body>
+</html>
