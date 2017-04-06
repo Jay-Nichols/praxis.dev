@@ -1,0 +1,39 @@
+body {
+	display: table;
+	min-height: 100%
+}
+
+
+#container {
+	display: table-footer-group;
+}
+
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 3px;
+	border-radius: 4px;
+}
+
+.fa:hover {
+	opacity: 0.6;
+}
+
+.fa-facebook {
+	background-color: #3B5998;
+	color: white;
+}
+
+.fa-twitter {
+	background-color: #55ACEE;
+	color: white;
+}
+
+.fa-google {
+	background-color: #dd4b39;
+	color: white;
+}
+
