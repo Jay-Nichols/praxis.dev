@@ -1,0 +1,48 @@
+h3 {
+	text-align: center
+}
+
+#gradient1 {
+	height: 300px;
+	background: linear-gradient(red, yellow);
+}
+
+#gradient2 {
+	height: 300px;
+	background: linear-gradient(to right, blue, green);
+}
+
+#gradient3 {
+	height: 300px;
+	background: linear-gradient(to bottom left, #ff0000, #0000dd);
+}
+
+#gradient4 {
+	height: 300px;
+	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+#gradient5 {
+	height: 300px;
+	background: linear-gradient(to left, rgba(0,255,0,1), rgba(0,255,0,0));
+}
+
+#gradient6 {
+	height: 300px;
+	background: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+
+#gradient7 {
+	height: 300px;
+	background: radial-gradient(yellow, green, blue);
+}
+
+#gradient8 {
+	height: 300px;
+	background: radial-gradient(circle, red 10%, yellow 25%, orange 45%);
+}
+
+#gradient9 {
+	height: 300px;
+	background: repeating-radial-gradient(circle, blue, green 15%, yellow 10%);
+}
