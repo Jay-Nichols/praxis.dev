@@ -71,6 +71,7 @@ body {
 	padding: 5px;
 	background-color: #1abc9c;
 	color: white;
+	border-radius: 5px;
 }
 
 @media screen and (max-width:720px) {
