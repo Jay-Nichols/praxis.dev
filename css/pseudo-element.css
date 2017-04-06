@@ -1,0 +1,21 @@
+#first-paragraph::first-letter {
+	color: #ff0000;
+	font-size: xx-large;
+}
+
+#second-paragraph::first-line {
+	color: #00ff00;
+	text-decoration: underline;
+}
+
+/* highlighting text */
+
+::selection {
+	color: red;
+	background: yellow;
+}
+
+p::after {
+	content: " - This is Latin";
+	color: red;
+}
