@@ -1,0 +1,12 @@
+/* make the container behave like a table */
+.col-container {
+	display: table;
+	width: 100%;
+}
+
+
+/* now make the contents of the table behave like cells in a table */
+.col {
+	display: table-cell;
+	padding: 15px;
+}
