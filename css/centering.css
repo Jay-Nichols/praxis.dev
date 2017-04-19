@@ -1,0 +1,10 @@
+body {
+	background: #666;
+}
+
+.content {
+	max-width: 500px;
+	margin: auto;
+	background: papayawhip;
+	padding: 10px;
+}
