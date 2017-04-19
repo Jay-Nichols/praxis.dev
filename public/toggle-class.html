@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Toggling a Class</title>
+	<link href="../css/toggle-class.css" rel="stylesheet">
+</head>
+<body>
+
+<p>Click on the button below to toggle between adding and removing "styledDiv" class name on the div element</p>
+<button onclick="toggle()">Click Here</button>
+<div id="divElement">This element will change when you click the button</div>
+
+<script type="text/javascript">
+	"use strict";
+	function toggle() {
+		var x = document.getElementById("divElement");
+		x.classList.toggle("styledDiv");
+	}
+</script>
+
+</body>
+</html>
