@@ -1,0 +1,52 @@
+#container1 {
+	background-color: crimson;
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+}
+
+#text1 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+
+#container2 {
+	background-color: cornsilk;
+	width: 100%;
+	padding-top: 56.25%; /*this give it the 16:9 ratio */;
+	position: relative;
+}
+
+#text2 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+
+#container3 {
+	background-color: chocolate;
+	width: 100%;
+	padding-top: 75%; /*this give it the 4:3 ratio */;
+	position: relative;
+}
+
+#text3 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 20px;
+	color: white;
