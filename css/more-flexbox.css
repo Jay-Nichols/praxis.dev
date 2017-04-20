@@ -1,0 +1,17 @@
+body {
+	direction: rtl;
+}
+
+.container {
+	display: flex;
+	width: 400px;
+	height: 250px;
+	background-color: lightgrey;
+}
+
+.item {
+	background-color: crimson;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
