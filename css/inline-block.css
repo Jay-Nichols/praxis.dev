@@ -1,0 +1,13 @@
+.inline-block {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+	background: chartreuse;
+}
+
+.after-box {
+	height: 30px;
+	width: 1000px;
+	background: cyan;
+}
