@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Number Pyramid</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	// var total = '' + 1;
+	// console.log(total);
+
+	// var x = 1;
+
+	// console.log(total += x);
+	// console.log(total += x);
+	// console.log(total += x);
+	// console.log(total += x);
+	// console.log(total += x);
+	// console.log(total += x);
+
+	for (var i = 1; i <= 10; i++) {
+		
+		var total = '';
+
+		for (var j = 1; j <= i; j++) {
+			if (i == 10) {
+				total += 0;
+			} else {
+				total += i;
+			}
+		}
+		console.log(total);
+
+
+	}
+
+	for (var a = 10; a >= 0; a--) {
+		
+		var sum = '';
+
+		for (var b = 10; b >= a; b--) {
+			if (a == 0) {
+				sum += 0;
+			} else {
+				sum += a
+			}
+		}
+
+		console.log(sum);
+
+	}
+
+
+</script>
+</body>
+</html>
