@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Blur</title>
+	<style>
+		#words {
+			color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	Type a message, then change its color by clicking outside the box: <input type="text" id="words" onblur="changeColor()"></input>
+
+	<p>By using the onblur attribute inside the input tag, you can name a function that will do something when you click outside the box</p>
+</body>
+<script>
+	function changeColor() {
+		var words = document.getElementById('words');
+		words = words.style="color:red";
+	} 
+</script>
+</html>
